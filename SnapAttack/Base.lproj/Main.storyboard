@@ -1,14 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cheveuxdange.ttf">
+            <string>Cheveuxdange</string>
+        </array>
+        <array key="DK Cinnabar Brush.ttf">
+            <string>DKCinnabarBrush</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapAttack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +30,104 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Table" translatesAutoresizingMaskIntoConstraints="NO" id="yLy-jW-mhM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_cover" translatesAutoresizingMaskIntoConstraints="NO" id="GeW-7B-6NV">
+                                <rect key="frame" x="16" y="233" width="168" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AwZ-EY-MlD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_cover" translatesAutoresizingMaskIntoConstraints="NO" id="RlB-hC-Meb">
+                                <rect key="frame" x="191" y="233" width="168" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="OJd-Mj-unI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-2X-onU">
+                                <rect key="frame" x="16" y="441" width="343" height="206"/>
+                                <fontDescription key="fontDescription" name="DKCinnabarBrush" family="DK Cinnabar Brush" pointSize="70"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="gameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMZ-sR-Co8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-Fi-paR">
+                                <rect key="frame" x="16" y="20" width="343" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ibI-Fi-paR" secondAttribute="height" multiplier="343:118" id="rRJ-1v-h7P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DKCinnabarBrush" family="DK Cinnabar Brush" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZnY-xy-uVT">
+                                <rect key="frame" x="191" y="146" width="168" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Z0j-w3-w70"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cheveuxdange" family="Cheveuxdange" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vcN-LR-Jsn">
+                                <rect key="frame" x="16" y="146" width="168" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="j8w-Dl-ITJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cheveuxdange" family="Cheveuxdange" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ylt-2X-onU" firstAttribute="top" secondItem="GeW-7B-6NV" secondAttribute="bottom" constant="8" id="1OG-qz-Sh8"/>
+                            <constraint firstItem="GeW-7B-6NV" firstAttribute="width" secondItem="vcN-LR-Jsn" secondAttribute="width" id="6gY-Eh-qFW"/>
+                            <constraint firstItem="GeW-7B-6NV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6hS-cB-IaR"/>
+                            <constraint firstItem="ZnY-xy-uVT" firstAttribute="top" secondItem="ibI-Fi-paR" secondAttribute="bottom" constant="8" id="6ka-fd-aIe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ylt-2X-onU" secondAttribute="bottom" constant="20" id="6wE-5a-1sq"/>
+                            <constraint firstItem="RlB-hC-Meb" firstAttribute="width" secondItem="vcN-LR-Jsn" secondAttribute="width" id="9U1-O8-Xob"/>
+                            <constraint firstItem="RlB-hC-Meb" firstAttribute="leading" secondItem="GeW-7B-6NV" secondAttribute="trailing" constant="7" id="Cpk-hK-Zcp"/>
+                            <constraint firstItem="ylt-2X-onU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Dlt-UY-KFz"/>
+                            <constraint firstItem="ylt-2X-onU" firstAttribute="top" secondItem="RlB-hC-Meb" secondAttribute="bottom" constant="8" id="JsY-7j-HTp"/>
+                            <constraint firstItem="ZnY-xy-uVT" firstAttribute="leading" secondItem="vcN-LR-Jsn" secondAttribute="trailing" constant="7" id="Kiz-gZ-Rau"/>
+                            <constraint firstItem="yLy-jW-mhM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LJZ-Ag-Zkg"/>
+                            <constraint firstItem="ylt-2X-onU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MWE-2W-svQ"/>
+                            <constraint firstItem="ZnY-xy-uVT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Nj3-5r-M83"/>
+                            <constraint firstItem="ZnY-xy-uVT" firstAttribute="width" secondItem="vcN-LR-Jsn" secondAttribute="width" id="UUi-XS-Lsu"/>
+                            <constraint firstItem="yLy-jW-mhM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZFW-VI-Jzc"/>
+                            <constraint firstItem="RlB-hC-Meb" firstAttribute="top" secondItem="ZnY-xy-uVT" secondAttribute="bottom" constant="8" id="aS0-XV-ry1"/>
+                            <constraint firstItem="GeW-7B-6NV" firstAttribute="top" secondItem="vcN-LR-Jsn" secondAttribute="bottom" constant="8" id="axI-1T-TEJ"/>
+                            <constraint firstItem="vcN-LR-Jsn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bGm-dr-TyO"/>
+                            <constraint firstItem="RlB-hC-Meb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dXY-LP-PTo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yLy-jW-mhM" secondAttribute="bottom" id="f54-u7-xb5"/>
+                            <constraint firstItem="ibI-Fi-paR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gg2-p6-dhh"/>
+                            <constraint firstItem="vcN-LR-Jsn" firstAttribute="top" secondItem="ibI-Fi-paR" secondAttribute="bottom" constant="8" id="i5b-bz-7mJ"/>
+                            <constraint firstAttribute="trailing" secondItem="yLy-jW-mhM" secondAttribute="trailing" id="jQJ-1N-jOx"/>
+                            <constraint firstItem="ibI-Fi-paR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ypm-Hj-BmD"/>
+                            <constraint firstItem="ibI-Fi-paR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zCe-qL-6p1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstCard" destination="GeW-7B-6NV" id="hy3-Up-aMa"/>
+                        <outlet property="gameButton" destination="ylt-2X-onU" id="Ph1-e1-YZE"/>
+                        <outlet property="scoreLabel" destination="ZnY-xy-uVT" id="xwR-aZ-Czj"/>
+                        <outlet property="secondCard" destination="RlB-hC-Meb" id="VcH-r9-LZR"/>
+                        <outlet property="timeLabel" destination="vcN-LR-Jsn" id="zwH-60-FMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Table" width="1980" height="1200"/>
+        <image name="blue_cover" width="500" height="726"/>
+    </resources>
 </document>

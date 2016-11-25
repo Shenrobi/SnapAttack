@@ -12,6 +12,8 @@
 		E4FB584F1DD669CC0016A2CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FB584D1DD669CC0016A2CA /* Main.storyboard */; };
 		E4FB58511DD669CC0016A2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4FB58501DD669CC0016A2CA /* Assets.xcassets */; };
 		E4FB58541DD669CC0016A2CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4FB58521DD669CC0016A2CA /* LaunchScreen.storyboard */; };
+		E4FB585D1DD66A150016A2CA /* Cheveuxdange.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FB585B1DD66A150016A2CA /* Cheveuxdange.ttf */; };
+		E4FB585E1DD66A150016A2CA /* DK Cinnabar Brush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4FB585C1DD66A150016A2CA /* DK Cinnabar Brush.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E4FB58501DD669CC0016A2CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4FB58531DD669CC0016A2CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4FB58551DD669CC0016A2CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4FB585B1DD66A150016A2CA /* Cheveuxdange.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cheveuxdange.ttf; sourceTree = "<group>"; };
+		E4FB585C1DD66A150016A2CA /* DK Cinnabar Brush.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Cinnabar Brush.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		E4FB58481DD669CC0016A2CA /* SnapAttack */ = {
 			isa = PBXGroup;
 			children = (
+				E4FB585F1DD66A1A0016A2CA /* Resources */,
 				E4FB58491DD669CC0016A2CA /* AppDelegate.swift */,
 				E4FB584B1DD669CC0016A2CA /* ViewController.swift */,
 				E4FB584D1DD669CC0016A2CA /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				E4FB58551DD669CC0016A2CA /* Info.plist */,
 			);
 			path = SnapAttack;
+			sourceTree = "<group>";
+		};
+		E4FB585F1DD66A1A0016A2CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4FB585B1DD66A150016A2CA /* Cheveuxdange.ttf */,
+				E4FB585C1DD66A150016A2CA /* DK Cinnabar Brush.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +138,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FB585E1DD66A150016A2CA /* DK Cinnabar Brush.ttf in Resources */,
 				E4FB58541DD669CC0016A2CA /* LaunchScreen.storyboard in Resources */,
 				E4FB58511DD669CC0016A2CA /* Assets.xcassets in Resources */,
 				E4FB584F1DD669CC0016A2CA /* Main.storyboard in Resources */,
+				E4FB585D1DD66A150016A2CA /* Cheveuxdange.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,7 @@
 				E4FB585A1DD669CC0016A2CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
